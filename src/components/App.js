@@ -74,8 +74,8 @@ const App = () => {
 					</div>
 					<div>
 						{" "}
-						<p className="btn-label">{`<Button color="secondary" size="md" icon="cart-left"/>`}</p>
-						<Button color="secondary" size="md" icon="cart-left">Button</Button>
+						<p className="btn-label">{`<Button color="secondary" size="md" icon="cart-left" variant="outline"/>`}</p>
+						<Button color="secondary" size="md" icon="cart-left" variant="outline">Button</Button>
 					</div>
 				
 				</div>
