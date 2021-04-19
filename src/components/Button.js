@@ -1,13 +1,13 @@
 import styled, { css } from "styled-components";
-import cart from 'icons/cart.png'
+import cart from "icons/cart.png";
 
 export default styled.button.attrs(props => {
 	return {
 		disabled: true,
+		className: "btn",
 	};
 })`
 	min-width: 88px;
-	margin: 16px;
 	text-align: center;
 	color: #3f3f3f;
 	font-size: 14px;
@@ -20,7 +20,7 @@ export default styled.button.attrs(props => {
 		background: #aeaeae;
 	}
 
-	// VARIATIONS
+	// BORDER VARIATIONS
 	${({ variant }) => {
 		switch (variant) {
 			case "outline":
@@ -44,18 +44,82 @@ export default styled.button.attrs(props => {
 		}
 	}}
 
-	// WITH ICONS 
+	// ICON+POS VARIATIONS
 	${({ icon }) => {
+		const txtColor = css`
+			color: white;
+		`;
+
+		const pseudoStyles = css`
+			content: url(${cart});
+			transform: translateY(3px);
+			display: inline-block;
+		`;
+
 		switch (icon) {
-			case "cart--left":
+			case "cart-left":
 				return css`
 					&::before {
-						content: url(${cart});
 						padding-right: 5px;
-						transform: translateY(3px);
-						display: inline-block;
+						${pseudoStyles}
 					}
-					padding-bottom: 10px;
+					${txtColor}
+				`;
+			case "cart-right":
+				return css`
+					&::after {
+						padding-left: 5px;
+						${pseudoStyles}
+					}
+					${txtColor}
+				`;
+		}
+	}}
+
+	// SIZE VARIATION
+	${({ size }) => {
+		switch (size) {
+			case "sm":
+				return css`
+					padding: 6px 12px;
+				`;
+			case "md":
+				return css`
+					padding: 8px 16px;
+				`;
+			case "lg":
+				return css`
+					padding: 11px 22px;
+				`;
+		}
+	}}
+
+	// COLOR VARIATION
+	${({ color }) => {
+		switch (color) {
+			case "primary":
+				return css`
+					color: white;
+					background-color: #0069d9;
+					&:hover {
+						background-color: #094586;
+					}
+				`;
+			case "secondary":
+				return css`
+					color: white;
+					background-color: #6c757d;
+					&:hover {
+						background-color: #40474d;
+					}
+				`;
+			case "success":
+				return css`
+					color: white;
+					background-color: #28a745;
+					&:hover {
+						background-color: #1f7031;
+					}
 				`;
 		}
 	}}

@@ -1,10 +1,27 @@
 body {
-    font-family: "Poppins", sans-serif;
-    padding: 100px;
-    /* background-color: #333; */
+	font-family: "Poppins", sans-serif;
+	padding: 100px;
+	/* background-color: #333; */
 }
 
 h1 {
-    font-size: 56px;
-    margin-bottom: 60px;
+	font-size: 56px;
+	margin-bottom: 60px;
+    letter-spacing: -2px;
+}
+
+.btn-label {
+	font-size: 12px;
+	opacity: 0.5;
+	margin-bottom: 8px;
+}
+
+.flex {
+	display: flex;
+	margin-bottom: 48px;
+	/* justify-content: space-between; */
+}
+
+.flex div {
+	margin-right: 30px;
 }
