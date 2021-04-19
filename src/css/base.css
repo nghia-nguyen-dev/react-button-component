@@ -1,4 +1,10 @@
 body {
     font-family: "Poppins", sans-serif;
     padding: 100px;
+    /* background-color: #333; */
+}
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 60px;
 }
